@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>🌎 Earth, Saturn and Jupiter at four corners of the page!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        /*
+            @Author: Siken MS Dongol
+            @Date: April 8, 2023
+
+            CSS four corners absolute positioning
+            - planet Saturn at [top-left] & [bottom-right] position
+            - planet Earth at [top-right] position
+            - planet Jupiter at [bottom-left] position
+        */
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            /* important for bottom-left/right abs position */
+
+            color: lightblue;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-42%, -42%);
+            opacity: 0.75;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(44%, -44%);
+            opacity: 0.9;
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(-44%, 44%);
+            opacity: 0.75;
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(42%, 42%);
+            opacity: 0.75;
+        }
+
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 6rem;
+            color: lightgoldenrodyellow;
+            text-shadow: 0.3rem 0.3rem 0.7rem rgba(151, 151, 151, 0.70);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="top-left" src="../img/saturn.png" alt="Saturn" />
+        <img class="top-right" src="../img/earth.png" alt="Earth" />
+        <img class="bottom-left" src="../img/jupiter.png" alt="Jupiter" />
+        <img class="bottom-right" src="../img/saturn.png" alt="Saturn" />
+        <div class="center-text">
+            <p>Saturn, Earth and Jupiter</p>
+        </div>
+
+        <div>by <em>Siken Dongol</em></div>
+    </div>
+</body>
+
+</html>
