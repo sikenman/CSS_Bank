@@ -1,20 +1,37 @@
 /*
     @Author: Siken MS Dongol
-    @Date: April 8, 2023
+    @Date: April 8-9, 2023
 
     CSS four corners absolute positioning
     - planet Saturn at [top-left] & [bottom-right] position
     - planet Earth at [top-right] position
     - planet Jupiter at [bottom-left] position
+
+    CSS center absolute positioning
+    - moon position is at somewhere center
 */
 
+:root {
+  --textcolor1: #60a9b4;
+  --textcolor2: gold;
+
+  --transNeg-Mobile: -50%;
+  --transPos-Mobile: 50%;
+
+  --transNeg: -43%;
+  --transPos: 43%;
+
+  --opacity1: 0.65;
+  --opacity2: 0.80;
+}
 
 .container {
   position: relative;
   height: 100vh;
   /* important for bottom-left/right abs position */
 
-  color: lightblue;
+  color: silver;
+  color: var(--textcolor1);
   font-size: 1.5rem;
   text-align: center;
 }
@@ -23,32 +40,32 @@
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(-42%, -42%);
-  opacity: 0.6;
+  transform: translate(var(--transNeg), var(--transNeg));
+  opacity: var(--opacity1);
 }
 
 .top-right {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(44%, -44%);
-  opacity: 0.9;
+  transform: translate(var(--transPos), var(--transNeg));
+  opacity: var(--opacity2);
 }
 
 .bottom-left {
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translate(-44%, 44%);
-  opacity: 0.5;
+  transform: translate(var(--transNeg), var(--transPos));
+  opacity: var(--opacity1);
 }
 
 .bottom-right {
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(42%, 42%);
-  opacity: 0.5;
+  transform: translate(var(--transPos), var(--transPos));
+  opacity: var(--opacity1);
 }
 
 .center-text {
@@ -58,12 +75,42 @@
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 6rem;
-  color: lightyellow;
-  text-shadow: 0.3rem 0.3rem 0.7rem rgba(151, 151, 151, 0.7);
+  color: var(--textcolor2);
+  text-shadow: 0.2rem 0.2rem 0.6rem rgba(190, 190, 190, 0.7);
 }
 
 .moon {
+  position: absolute;
+  top: 28%;
+  left: 30%;
+  z-index: -1;  /* send moon to the back position */
+}
+
+@media only screen and (max-width: 600px) {
+  .top-left {
+    transform: translate(var(--transNeg-Mobile), var(--transNeg-Mobile));
+  }
+  .top-right {
+    transform: translate(var(--transPos-Mobile), var(--transNeg-Mobile));
+  }
+  .bottom-left {
+    transform: translate(var(--transNeg-Mobile), var(--transPos-Mobile));
+  }
+  .bottom-right {
+    transform: translate(
+      var(--transPos-Mobile),
+      var(--transPos-Mobile)
+    );
+  }
+  .moon {
     position: absolute;
-    top: 28%;
-    left: 30%;
+    top: 20%;
+    left: 20%;
+  }
+  .center-text {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    font-size: 4.5rem;
+  }
 }
