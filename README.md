@@ -1,5 +1,5 @@
 # CSS_Bank
-My CSS experiments of 2023 and beyond
+My CSS Experiments of 2023 and beyond
 
 ----
 ## Projects
@@ -7,9 +7,18 @@ My CSS experiments of 2023 and beyond
     - displays planets at the four corners of the web page.
     - displays moon at the center of the page.
     - makes use of css variables
+    - prevented text selection
 
 ### Example CSS Code in four-corner.html
 ```css
+:root {
+  --transNeg-Mobile: -50%;
+  --transPos-Mobile: 50%;
+
+  --opacity1: 0.65;
+  --opacity2: 0.80;
+}
+
 .moon {
   position: absolute;
   top: 28%;

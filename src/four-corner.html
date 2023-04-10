@@ -2,16 +2,23 @@
 <html lang="en">
 
 <head>
-    <title>🌎 Earth, Saturn and Jupiter at four corners of the page!</title>
+    <title>🌎 Earth, Saturn, Jupiter and Moon</title>
     <meta charset="UTF-8" />
+    <meta name="description"
+        content="Earth, Saturn and Jupiter are positioned at four corners of the page. Moon is positioned at the center of the page. " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="../src/style.css">
+
     <style>
         body {
             background-color: black;
             overflow: hidden;
             min-width: 480px;
+
+            /* prevent text selection */
+            /* Safari */
+            -webkit-user-select: none;
+            user-select: none;
         }
     </style>
 </head>
@@ -22,11 +29,10 @@
         <img class="top-right" src="../img/earth.png" alt="Earth" />
         <img class="bottom-left" src="../img/jupiter.png" alt="Jupiter" />
         <img class="bottom-right" src="../img/saturn.png" alt="Saturn" />
-
         <img class="moon" src="../img/moon320.png" alt="Moon">
 
         <div class="center-text">
-            <p>Saturn, Moon, Earth and Jupiter</p>
+            <p>Moon, <br />Earth, Saturn and Jupiter</p>
         </div>
 
         <div>by <em>Siken Dongol</em></div>
