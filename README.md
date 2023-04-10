@@ -8,6 +8,7 @@ My CSS Experiments of 2023 and beyond
     - displays moon at the center of the page.
     - makes use of css variables
     - prevented text selection
+    - animation of Earth, coming towards the moon slowly
 
 ### Example CSS Code in four-corner.html
 ```css
@@ -24,6 +25,10 @@ My CSS Experiments of 2023 and beyond
   top: 28%;
   left: 30%;
   z-index: -1;  /* send moon to the back position */
+}
+
+.earth-rotate {
+  animation: mymove 240s infinite;
 }
 
 @media only screen and (max-width: 600px) {
