@@ -8,14 +8,12 @@ My CSS Experiments of 2023 and beyond
     - displays moon at the center of the page
     - make use of CSS variables
     - prevented text selection
-<<<<<<< HEAD
-    - animation of Earth, coming towards the moon slowly
+    - animation of the Earth, it is slowly coming towards the moon
 - grid5by4.html
-  
-=======
-    - animation of Earth, Earth is slowly coming towards the moon
+    - displays 5 by 4 grids on the page occupying full screen
+    - some planets are displayed in the grid at the center
+    - when user click on the grid, it flips using CSS animation
 
->>>>>>> c751446bf5493f4c9441df1ee1f7641e6d9d4f76
 ### Example CSS Code in four-corner.html
 ```css
 :root {
