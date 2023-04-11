@@ -4,13 +4,18 @@ My CSS Experiments of 2023 and beyond
 ----
 ## Projects
 - four-corner.html 
-    - displays planets at the four corners of the web page.
-    - displays moon at the center of the page.
-    - makes use of css variables
+    - displays planets at the four corners of the web page
+    - displays moon at the center of the page
+    - make use of CSS variables
     - prevented text selection
+<<<<<<< HEAD
     - animation of Earth, coming towards the moon slowly
 - grid5by4.html
   
+=======
+    - animation of Earth, Earth is slowly coming towards the moon
+
+>>>>>>> c751446bf5493f4c9441df1ee1f7641e6d9d4f76
 ### Example CSS Code in four-corner.html
 ```css
 :root {
