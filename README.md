@@ -13,6 +13,9 @@ My CSS Experiments of 2023 and beyond
     - displays 5 by 4 grids on the page occupying full screen
     - some planets are displayed in the grid at the center
     - when user click on the grid, it flips using CSS animation
+- gradient-button.html
+    - displays two animated gradient buttons on button hover
+    - [Check](/src/gradient-button.html)
 
 ### Example CSS Code in four-corner.html
 ```css

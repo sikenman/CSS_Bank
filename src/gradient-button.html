@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Animated Button Gradients" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="">
+    <title>Animated Button Gradients</title>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+            overflow: hidden;
+
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            font-size: 2rem;
+        }
+
+        .anim-bg-gradient {
+            width: 20rem;
+            height: 5rem;
+            padding: 0.6em 1.2em;
+            border-radius: 0.4em;
+            cursor: pointer;
+            color: white;
+            color: gold;
+        }
+
+        #button1,
+        #button2 {
+            background: linear-gradient(135deg, darkmagenta, crimson, teal);
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            transition: background-position .6s;
+        }
+
+        #button2 {
+            background: linear-gradient(135deg, darkmagenta, crimson, orange);
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            transition: background-position .6s;
+        }
+
+        #button1:hover {
+            background-position: 0 0;
+        }
+
+        #button2:hover {
+            background-position: 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Ref: https://codyhouse.co/nuggets/animated-button-gradients -->
+    <button id="button1" class="reset anim-bg-gradient">Amit Bajaj</button>
+    <button id="button2" class="reset anim-bg-gradient">Siken M Dongol</button>
+
+</body>
+
+</html>
